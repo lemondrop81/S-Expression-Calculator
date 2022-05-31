@@ -8,18 +8,18 @@ namespace S_Expression_Calculator
 {
     internal class Program
     {
+        /// <summary>
+        /// Main method for the S-Expression calculations.
+        /// </summary>
+        /// <param name="args">Command line argument that gets passed for evaluation. </param>
         static void Main(string[] args)
         {
 
-            var input = args;
-            List<String> inputList = input.ToList();
+            List<String> inputList = args.ToList();
 
-            int answer = 0;
-
-            if(input.Length == 1)
+            if(inputList.Count == 1)
             {
-                answer = int.Parse(input[0]);
-                Console.WriteLine(answer);
+                Console.WriteLine(int.Parse(inputList[0]));
             }
 
             else
@@ -36,6 +36,11 @@ namespace S_Expression_Calculator
             }
         }
 
+        /// <summary>
+        /// Method to iterate through the list, and call the add or multiply methods. 
+        /// </summary>
+        /// <param name="inputList">Gets a list of expressions and goes through it</param>
+        /// <returns>Returns an updated list of expressions </returns>
         public List<String> Expression(List<String> inputList)
         {
             for (int i = 0; i < inputList.Count; i++)
@@ -89,15 +94,21 @@ namespace S_Expression_Calculator
         /// <summary>
         /// Method to add two number together and return the sum.
         /// </summary>
-        /// <param name="firstNumber">First number</param>
-        /// <param name="secondNumber"></param>
-        /// <returns></returns>
+        /// <param name="firstNumber">First number to add</param>
+        /// <param name="secondNumber">Second number to add</param>
+        /// <returns>The value that gets returned. </returns>
         public int Add(int firstNumber, int secondNumber)
         {
            int output = firstNumber + secondNumber;
             return output;
         }
 
+        /// <summary>
+        /// Method to multiply two numbers together and return the sum. 
+        /// </summary>
+        /// <param name="firstNumber">First number to multiply.</param>
+        /// <param name="secondNumber">Second number to muktiply.</param>
+        /// <returns></returns>
         public int Multiply(int firstNumber, int secondNumber)
         {
             int output = firstNumber * secondNumber;
