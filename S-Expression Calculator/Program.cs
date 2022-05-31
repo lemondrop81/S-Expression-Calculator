@@ -17,6 +17,7 @@ namespace S_Expression_Calculator
             if(input.Length == 1)
             {
                 answer = int.Parse(input[0]);
+                Console.WriteLine(answer);
             }
 
             else
@@ -26,8 +27,11 @@ namespace S_Expression_Calculator
 
                 }
             }
+        }
 
-            Console.WriteLine(answer);
+        public int Add(int firstNumber, int secondNumber)
+        {
+            return 10;
         }
     }
 }
