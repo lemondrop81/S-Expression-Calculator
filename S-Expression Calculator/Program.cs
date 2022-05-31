@@ -19,6 +19,14 @@ namespace S_Expression_Calculator
                 answer = int.Parse(input[0]);
             }
 
+            else
+            {
+                if(input[0] == "Add")
+                { 
+
+                }
+            }
+
             Console.WriteLine(answer);
         }
     }
