@@ -26,11 +26,6 @@ namespace S_Expression_Calculator
             {
                 var addExpression = new Program();
                 var results = addExpression.Expression(inputList);
-                
-                while(results.Count > 1)
-                {
-                    results = addExpression.Expression(inputList);
-                }
 
                 Console.WriteLine(results[0]);
             }
@@ -86,6 +81,12 @@ namespace S_Expression_Calculator
                         inputList.RemoveAt(i - 2);
                     }
                 }
+            }
+
+            // Recursion to go through the expression.
+            while(inputList.Count > 1)
+            {
+                Expression(inputList);
             }
 
             return inputList;
